@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Game } from "./components/game/Game";
+import 'bootstrap/dist/css/bootstrap.min.css';
+/* import NotFound from './NotFound'; */
+
+/* import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Game } from "./components/game/Game";
+import { Navigate } from 'react-router-dom'; // В данном случае используется Navigate вместо Switch */
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ backgroundColor: '#262626' }}>
+    <Router>
+      <div>
+        <Routes>
+          <Route index element={<Game />} />
+          <Route path="/game" element={<Game />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
+        </Routes>
+      </div>
+    </Router>
     </div>
   );
 }
