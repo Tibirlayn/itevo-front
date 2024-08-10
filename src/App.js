@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Game } from "./components/game/Game";
+import { Auth } from "./components/auth/Auth"
 import 'bootstrap/dist/css/bootstrap.min.css';
 /* import NotFound from './NotFound'; */
 
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route index element={<Game />} />
           <Route path="/game" element={<Game />} />
+          <Route path="/auth" element={<Auth />} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </div>

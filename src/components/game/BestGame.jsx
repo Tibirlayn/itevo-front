@@ -18,7 +18,7 @@ export function BestGame() {
   return (
     <Row className='rounded custom-bg-gray m-5 p-4'> {/* Указываем количество колонок для разных размеров экрана */}
     <Row >
-      <Col className="text-light ">
+      <Col className="text-light">
         <h2><strong>BEST GAME</strong></h2>
       </Col>
     </Row>
